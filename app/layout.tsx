@@ -14,11 +14,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <header style={{ padding: '12px 16px', borderBottom: '1px solid #eee' }}>
           <b>API-first Demo</b>
           <nav style={{ display: 'inline-block', marginLeft: 16 }}>
-            <Link href="/">Home</Link>
+            <Link href="/" legacyBehavior><a>Home</a></Link>
             <span style={{ margin: '0 8px' }}>|</span>
-            <Link href="/users">Users</Link>
+            <Link href="/users" legacyBehavior><a>Users</a></Link>
             <span style={{ margin: '0 8px' }}>|</span>
-            <Link href="/posts">Posts</Link>
+            <Link href="/posts" legacyBehavior><a>Posts</a></Link>
+            <span style={{ margin: '0 8px' }}>|</span>
+            <Link href="/profile" legacyBehavior><a>Profile</a></Link>
           </nav>
         </header>
         <main style={{ padding: 16 }}>{children}</main>
